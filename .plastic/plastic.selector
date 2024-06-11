@@ -1,0 +1,4 @@
+repository "Loko Rush@Compantek@cloud"
+  path "/"
+    br "/main"
+    co "/main"

@@ -154,12 +154,12 @@ namespace StarterAssets
                 RotatePlayerToCursor();
             }
 
-            if (_isShooting)
+            if (_isShooting && _mainParticle.isPlaying == false)
             {
                 _mainParticle.Play();
 
             }
-            else
+            else if (!_isShooting)
             {
                 _mainParticle.Stop();
             }

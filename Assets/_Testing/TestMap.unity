@@ -153,17 +153,17 @@ PrefabInstance:
     - target: {fileID: 8418477143347841925, guid: 75a5df9ecc44d8c5092a82a459361465,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.005
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8418477143347841925, guid: 75a5df9ecc44d8c5092a82a459361465,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.005
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8418477143347841925, guid: 75a5df9ecc44d8c5092a82a459361465,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.005
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8418477143347841925, guid: 75a5df9ecc44d8c5092a82a459361465,
         type: 3}
@@ -173,12 +173,12 @@ PrefabInstance:
     - target: {fileID: 8418477143347841925, guid: 75a5df9ecc44d8c5092a82a459361465,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00907
+      value: 0.0091
       objectReference: {fileID: 0}
     - target: {fileID: 8418477143347841925, guid: 75a5df9ecc44d8c5092a82a459361465,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.00238
+      value: 0.00239
       objectReference: {fileID: 0}
     - target: {fileID: 8418477143347841925, guid: 75a5df9ecc44d8c5092a82a459361465,
         type: 3}
@@ -215,6 +215,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -62.942
       objectReference: {fileID: 0}
+    - target: {fileID: 8418477143347841925, guid: 75a5df9ecc44d8c5092a82a459361465,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8418477143347841931, guid: 75a5df9ecc44d8c5092a82a459361465,
         type: 3}
       propertyPath: playOnAwake
@@ -224,6 +229,11 @@ PrefabInstance:
         type: 3}
       propertyPath: playOnAwake
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418477143735079603, guid: 75a5df9ecc44d8c5092a82a459361465,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2203,6 +2213,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 50437725}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &2051371384 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8418477143347841931, guid: 75a5df9ecc44d8c5092a82a459361465,
+    type: 3}
+  m_PrefabInstance: {fileID: 50437725}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2053632754
 GameObject:
   m_ObjectHideFlags: 0
@@ -2606,6 +2622,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5199271984737046137, guid: ccbe68e17426352cd936dad236b148f0,
+        type: 3}
+      propertyPath: _mainParticle
+      value: 
+      objectReference: {fileID: 2051371384}
     - target: {fileID: 6173621571094134019, guid: ccbe68e17426352cd936dad236b148f0,
         type: 3}
       propertyPath: m_Sprite

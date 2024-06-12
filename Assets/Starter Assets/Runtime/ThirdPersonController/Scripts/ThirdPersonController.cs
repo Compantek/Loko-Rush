@@ -98,6 +98,8 @@ namespace StarterAssets
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
 
+        private int _animIDISAiming;
+
 #if ENABLE_INPUT_SYSTEM
         private PlayerInput _playerInput;
 #endif
@@ -112,6 +114,8 @@ namespace StarterAssets
         private const float _threshold = 0.01f;
 
         private bool _hasAnimator;
+
+        private bool _isAiming;
 
         private bool IsCurrentDeviceMouse
         {
@@ -161,9 +165,25 @@ namespace StarterAssets
         {
             _hasAnimator = _playerPrefab.TryGetComponent(out _animator);
 
+            AimAndShoot();
             JumpAndGravity();
             GroundedCheck();
             Move();
+        }
+
+        private void AimAndShoot()
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                _isAiming = true;
+
+            }
+
+            if (Input.GetMouseButtonUp(1))
+            {
+                _isAiming = false;
+            }
+            _animator.SetBool(_animIDISAiming, _isAiming);
         }
 
         private void LateUpdate()
@@ -178,6 +198,7 @@ namespace StarterAssets
             _animIDJump = Animator.StringToHash("Jump");
             _animIDFreeFall = Animator.StringToHash("FreeFall");
             _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
+            _animIDISAiming = Animator.StringToHash("Aiming");
         }
 
         private void GroundedCheck()

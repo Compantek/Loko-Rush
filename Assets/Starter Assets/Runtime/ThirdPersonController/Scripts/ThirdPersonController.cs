@@ -63,6 +63,7 @@ namespace StarterAssets
 
         [SerializeField] ParticleSystem _mainParticle;
 
+
         private CharacterController _controller;
         private StarterAssetsInputs _input;
         private GameObject _mainCamera;
@@ -128,6 +129,8 @@ namespace StarterAssets
 
         private void AimAndShoot()
         {
+
+
             if (Input.GetMouseButtonDown(1))
             {
                 _isAiming = true;
@@ -154,12 +157,12 @@ namespace StarterAssets
                 RotatePlayerToCursor();
             }
 
-            if (_isShooting && _mainParticle.isPlaying == false)
+            if (_isShooting && _mainParticle.isPlaying == false && _mainParticle != null)
             {
                 _mainParticle.Play();
 
             }
-            else if (!_isShooting)
+            else if (!_isShooting && _mainParticle != null)
             {
                 _mainParticle.Stop();
             }
@@ -266,6 +269,7 @@ namespace StarterAssets
 
         private void JumpAndGravity()
         {
+
             if (Grounded)
             {
                 _fallTimeoutDelta = FallTimeout;

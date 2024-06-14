@@ -290,6 +290,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8418477143735079603, guid: 75a5df9ecc44d8c5092a82a459361465,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0000000055144582
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418477143735079603, guid: 75a5df9ecc44d8c5092a82a459361465,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0000000044560178
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418477143735079603, guid: 75a5df9ecc44d8c5092a82a459361465,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000000029186909
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418477143735079603, guid: 75a5df9ecc44d8c5092a82a459361465,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000017881392
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418477143735079603, guid: 75a5df9ecc44d8c5092a82a459361465,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000029802319
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418477143735079603, guid: 75a5df9ecc44d8c5092a82a459361465,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000014901159
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -298,6 +328,12 @@ PrefabInstance:
 --- !u!4 &105533306 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8418477143347841925, guid: 75a5df9ecc44d8c5092a82a459361465,
+    type: 3}
+  m_PrefabInstance: {fileID: 105533305}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &105533308 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8418477143347841931, guid: 75a5df9ecc44d8c5092a82a459361465,
     type: 3}
   m_PrefabInstance: {fileID: 105533305}
   m_PrefabAsset: {fileID: 0}
@@ -1307,6 +1343,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8418477143735079603, guid: 0e2d0f322999efd9eac5e9dcac1c9266,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0000000055144582
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418477143735079603, guid: 0e2d0f322999efd9eac5e9dcac1c9266,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0000000044560178
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418477143735079603, guid: 0e2d0f322999efd9eac5e9dcac1c9266,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000000029186909
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418477143735079603, guid: 0e2d0f322999efd9eac5e9dcac1c9266,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000017881392
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418477143735079603, guid: 0e2d0f322999efd9eac5e9dcac1c9266,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000029802319
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418477143735079603, guid: 0e2d0f322999efd9eac5e9dcac1c9266,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000014901159
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1315,6 +1381,12 @@ PrefabInstance:
 --- !u!4 &748666429 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8418477143347841925, guid: 0e2d0f322999efd9eac5e9dcac1c9266,
+    type: 3}
+  m_PrefabInstance: {fileID: 748666428}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &748666431 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8418477143347841931, guid: 0e2d0f322999efd9eac5e9dcac1c9266,
     type: 3}
   m_PrefabInstance: {fileID: 748666428}
   m_PrefabAsset: {fileID: 0}
@@ -3077,14 +3149,12 @@ PrefabInstance:
         type: 3}
       propertyPath: redParticlePrefab
       value: 
-      objectReference: {fileID: 8418477143347841931, guid: 0e2d0f322999efd9eac5e9dcac1c9266,
-        type: 3}
+      objectReference: {fileID: 748666431}
     - target: {fileID: 5199271984737046137, guid: ccbe68e17426352cd936dad236b148f0,
         type: 3}
       propertyPath: blueParticlePrefab
       value: 
-      objectReference: {fileID: 8418477143347841931, guid: 75a5df9ecc44d8c5092a82a459361465,
-        type: 3}
+      objectReference: {fileID: 105533308}
     - target: {fileID: 5199271984737046137, guid: ccbe68e17426352cd936dad236b148f0,
         type: 3}
       propertyPath: _redParticleMaterial

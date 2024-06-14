@@ -61,19 +61,14 @@ namespace StarterAssets
         [SerializeField] GameObject _playerPrefab;
 
 
-        [SerializeField] ParticleSystem _mainParticle;
-        [SerializeField] ParticleSystem _splashParticle;
-        [SerializeField] ParticleSystem _collisonParticle;
-        [SerializeField] ParticleSystem _shootParticle;
-        [SerializeField] Material _redParticleMaterial;
-        [SerializeField] Material _blueParticleMaterial;
+        private ParticleSystem _mainParticle;
 
+        [SerializeField] private string teamColor;
 
-        private ParticleSystemRenderer _mainParticleRenderer;
-        private ParticleSystemRenderer _splashParticleRenderer;
-        private ParticleSystemRenderer _collisionParticleRenderer;
-        private ParticleSystemRenderer _shootParticleRenderer;
+        [SerializeField] private GameObject ParticlePosition;
 
+        [SerializeField] private ParticleSystem redParticlePrefab;
+        [SerializeField] private ParticleSystem blueParticlePrefab;
 
         private CharacterController _controller;
         private StarterAssetsInputs _input;
@@ -108,18 +103,7 @@ namespace StarterAssets
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
 
-            _mainParticleRenderer = _mainParticle.GetComponent<ParticleSystemRenderer>();
-            _shootParticleRenderer = _shootParticle.GetComponent<ParticleSystemRenderer>();
-            _collisionParticleRenderer = _collisonParticle.GetComponent<ParticleSystemRenderer>();
-            _splashParticleRenderer = _splashParticle.GetComponent<ParticleSystemRenderer>();
-
-            // Assign the new material to the Particle System
-            Debug.Log(_mainParticleRenderer.material);
-            _mainParticleRenderer.material = _redParticleMaterial;
-            _shootParticleRenderer.material = _redParticleMaterial;
-            _collisionParticleRenderer.material = _redParticleMaterial;
-            _splashParticleRenderer.material = _redParticleMaterial;
-            Debug.Log(_mainParticleRenderer.material);
+            
         }
 
 
@@ -139,6 +123,24 @@ namespace StarterAssets
 
             _jumpTimeoutDelta = JumpTimeout;
             _fallTimeoutDelta = FallTimeout;
+
+
+            ParticleSystem objectToInstaciate = null;
+
+            // Resaka choix ana team
+            if (teamColor == "red")
+            {
+                Debug.Log("Team Red");
+                _mainParticle = redParticlePrefab;
+            }
+            else if (teamColor == "blue")
+            {
+                 Debug.Log("Team Blue");
+                 _mainParticle = blueParticlePrefab;
+            }
+
+            // Check if a valid prefab was assigned
+            
         }
 
         private void Update()
@@ -155,24 +157,17 @@ namespace StarterAssets
         private void ChangeParticleColor()
         {
 
-            if (_input.jump)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-
-                if (_mainParticleRenderer.material == _redParticleMaterial)
-                {
-                    Debug.Log("Change Color to Blue");
-                    _mainParticleRenderer.material = _blueParticleMaterial;
-                    _shootParticleRenderer.material = _blueParticleMaterial;
-                    _collisionParticleRenderer.material = _blueParticleMaterial;
-                    _splashParticleRenderer.material = _blueParticleMaterial;
-                }
-                else
-                {
-                    Debug.Log("Change Color to Red");
-                    _mainParticleRenderer.material = _redParticleMaterial;
-                    _shootParticleRenderer.material = _redParticleMaterial;
-                    _collisionParticleRenderer.material = _redParticleMaterial;
-                    _splashParticleRenderer.material = _redParticleMaterial;
+                // To implement
+                if(teamColor == "red") {
+                    _mainParticle.Stop();
+                    teamColor = "blue";
+                    _mainParticle = blueParticlePrefab;
+                } else {
+                    _mainParticle.Stop();
+                    teamColor = "red";
+                    _mainParticle = redParticlePrefab;
                 }
             }
         }

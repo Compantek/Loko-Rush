@@ -70,6 +70,14 @@ namespace StarterAssets
         [SerializeField] private ParticleSystem redParticlePrefab;
         [SerializeField] private ParticleSystem blueParticlePrefab;
 
+        [SerializeField] private Material kevinPrefab;
+        [SerializeField] private Material ashPrefab;
+        [SerializeField] private Material cyborgPrefab;
+        [SerializeField] private Material rogerPrefab;
+
+        [SerializeField] private SkinnedMeshRenderer characterBody;
+
+
         private CharacterController _controller;
         private StarterAssetsInputs _input;
         private GameObject _mainCamera;
@@ -103,7 +111,7 @@ namespace StarterAssets
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
 
-            
+
         }
 
 
@@ -135,12 +143,31 @@ namespace StarterAssets
             }
             else if (teamColor == "blue")
             {
-                 Debug.Log("Team Blue");
-                 _mainParticle = blueParticlePrefab;
+                Debug.Log("Team Blue");
+                _mainParticle = blueParticlePrefab;
             }
 
             // Check if a valid prefab was assigned
-            
+            if (StaticSceneManager.playerName == "Kevin")
+            {
+                characterBody.material = kevinPrefab;
+            }
+
+            if (StaticSceneManager.playerName == "Ash")
+            {
+                characterBody.material = ashPrefab;
+            }
+
+            if (StaticSceneManager.playerName == "Cyborg")
+            {
+                characterBody.material = cyborgPrefab;
+            }
+
+            if (StaticSceneManager.playerName == "Roger")
+            {
+                characterBody.material = rogerPrefab;
+            }
+
         }
 
         private void Update()
@@ -160,11 +187,14 @@ namespace StarterAssets
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 // To implement
-                if(teamColor == "red") {
+                if (teamColor == "red")
+                {
                     _mainParticle.Stop();
                     teamColor = "blue";
                     _mainParticle = blueParticlePrefab;
-                } else {
+                }
+                else
+                {
                     _mainParticle.Stop();
                     teamColor = "red";
                     _mainParticle = redParticlePrefab;
